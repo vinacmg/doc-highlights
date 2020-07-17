@@ -1,0 +1,30 @@
+div.background {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.top {
+    height: 25vh;
+    width: 100vw;
+}
+
+.bottom {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: row;
+}
+
+.left-bar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15%;
+}
+
+.document {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
