@@ -7,7 +7,7 @@ div.background {
 }
 
 .top {
-    height: 25vh;
+    height: 20vh;
     width: 100vw;
 }
 
@@ -18,13 +18,25 @@ div.background {
     flex-flow: row;
 }
 
+.menu {
+    height: 5vh;
+    width: 100vw;
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(190, 190, 190);
+    display:flex; 
+    flex-direction:row;
+}
+
 .left-bar {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 15%;
 }
 
-.document {
+.doc {
     flex-grow: 0;
     flex-shrink: 0;
+    flex-basis: 85%;
 }

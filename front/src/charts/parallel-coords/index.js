@@ -10,6 +10,12 @@ const trace = {
   dimensions: [{
     range: [1, 5],
     constraintrange: [1, 2],
+    label: 'C',
+    values: [2,4],
+    tickvals: [1,2,4,5],
+    ticktext: ['text 1','text 2','text 4','text 5']
+  }, {
+    range: [1, 5],
     label: 'A',
     values: [1,4]
   }, {    
@@ -17,12 +23,6 @@ const trace = {
     label: 'B',
     values: [3,1.5],
     tickvals: [1.5,3,4.5]
-  }, {
-    range: [1, 5],
-    label: 'C',
-    values: [2,4],
-    tickvals: [1,2,4,5],
-    ticktext: ['text 1','text 2','text 4','text 5']
   }, {
     range: [1, 5],
     label: 'D',
@@ -37,7 +37,17 @@ class ParallelCoords extends Component {
         data={[
           trace,
         ]}
-        layout={ {width: 1600, height: 300} }
+        layout={{
+          width: 1500,
+          height: 150,
+          margin: {
+            l: 50,
+            r: 50,
+            b: 20,
+            t: 50,
+            pad: 0
+          },
+        }}
       />
     );
   }
