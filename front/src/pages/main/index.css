@@ -7,12 +7,12 @@ div.background {
 }
 
 .top {
-    height: 20vh;
+    height: 22vh;
     width: 100vw;
 }
 
 .bottom {
-    height: 80vh;
+    height: 78vh;
     width: 100vw;
     display: flex;
     flex-flow: row;
