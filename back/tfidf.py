@@ -8,4 +8,9 @@ class TfIdfSummarizer(object):
         self.vectorizer.fit_transform(sentences)
     def get_scores(self, sentences):
         scores = np.sum(self.vectorizer.transform(sentences).toarray(), axis=1)
+
+        minimum = scores.min()
+        maximum = scores.max()
+        scores = (scores - minimum)/(maximum - minimum)
+
         return scores

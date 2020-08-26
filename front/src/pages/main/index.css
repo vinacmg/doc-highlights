@@ -32,11 +32,17 @@ div.background {
 .left-bar {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 15%;
+    flex-basis: 10%;
+}
+
+.right-bar {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
 }
 
 .doc {
     flex-grow: 0;
     flex-shrink: 0;
-    flex-basis: 85%;
+    flex-basis: 70%;
 }

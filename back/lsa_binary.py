@@ -3,9 +3,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from gensim.models import LsiModel
 from gensim.matutils import corpus2dense
 
-class LSASummarizer(object):
+class LSABinarySummarizer(object):
     def __init__(self):
-        self.vectorizer = CountVectorizer()
+        self.vectorizer = CountVectorizer(binary=True)
     def fit(self, sentences):
         X = self.vectorizer.fit_transform(sentences)
         doc_term_matrix = X.transpose()

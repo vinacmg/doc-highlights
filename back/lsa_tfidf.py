@@ -1,11 +1,11 @@
 import numpy as np
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from gensim.models import LsiModel
 from gensim.matutils import corpus2dense
 
-class LSASummarizer(object):
+class LSATfidfSummarizer(object):
     def __init__(self):
-        self.vectorizer = CountVectorizer()
+        self.vectorizer = TfidfVectorizer()
     def fit(self, sentences):
         X = self.vectorizer.fit_transform(sentences)
         doc_term_matrix = X.transpose()

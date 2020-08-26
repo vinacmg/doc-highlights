@@ -8,6 +8,12 @@ const style = {
     bold: {
         fontWeight: 'bold',
     },
+    border: {
+        border: '1px solid black',
+    },
+    red: {
+        color: '#E31A1D',
+    },
 };
 
 class Document extends Component {
@@ -19,11 +25,12 @@ class Document extends Component {
             document: props.document,
             tfidf: props.tfidf,
             lsi: props.lsi,
+            file: props.file,
         };
     }
 
-    componentWillReceiveProps({document, tfidf, lsi}) {
-        this.setState({...this.state, document, tfidf, lsi})
+    componentWillReceiveProps({document, tfidf, lsi, file}) {
+        this.setState({...this.state, document, tfidf, lsi, file})
     }
 
     clickText = (index) => {
@@ -32,7 +39,7 @@ class Document extends Component {
 
     render() {
 
-        const { document, tfidf, lsi } = this.state;
+        const { document, tfidf, lsi, file } = this.state;
 
         var min_tfidf = 999
         var max_tfidf = -1
@@ -55,7 +62,7 @@ class Document extends Component {
         return (
             <div className="card">
                 <div className="card-body">
-                    <h5 className="card-title text-center mb-4">Highlighted</h5>
+                    <h5 className="card-title text-center mb-4">{file}</h5>
                     <div className="card-text text-justify scrollable">
                         <p>
                             {
